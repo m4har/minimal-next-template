@@ -6,7 +6,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - [ ] Auth
 - [ ] Jest
 - [x] Tailwind & Styled
-- [ ] Zustand
+- [x] Zustand
 
 ## Getting Started
 
