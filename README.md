@@ -3,7 +3,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## Todo
 
 - [x] Typescript alias
-- [ ] Auth
+- [x] Auth
 - [ ] Jest
 - [x] Tailwind & Styled
 - [x] Zustand
