@@ -8,7 +8,8 @@
       "@helpers/*": ["helpers/*"],
       "@stores/*": ["stores/*"],
       "@styles/*": ["styles/*"],
-      "@utils/*": ["utils/*"]
+      "@utils/*": ["utils/*"],
+      "@hoc/*": ["hoc/*"]
     },
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
