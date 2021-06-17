@@ -5,7 +5,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - [x] Typescript alias
 - [ ] Auth
 - [ ] Jest
-- [ ] Tailwind & Styled
+- [x] Tailwind & Styled
 - [ ] Zustand
 
 ## Getting Started
