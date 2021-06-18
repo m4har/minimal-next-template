@@ -44,5 +44,4 @@ const protectHOC = (Component: any) => (props: any) => {
 
   return <Component {...props} />;
 };
-
 export default protectHOC;

@@ -1,4 +1,3 @@
-import Head from "next/head";
 import { useCallback } from "react";
 import Button from "@components/button";
 import Input from "@components/input";
