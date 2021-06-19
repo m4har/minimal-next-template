@@ -27,7 +27,7 @@ jobs:
 
       # basically npm install but only installs from package-lock
       - run: npm install
-      - run: npm run test -- --coverage
+      - run: npm run test -- --coverage --runInBand
 
       # Only run the coverage once
       - if: ${{ matrix.node-version == '14.x' }}
