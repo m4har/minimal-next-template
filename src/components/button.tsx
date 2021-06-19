@@ -5,7 +5,7 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   loading?: boolean;
 }
 
-export default function Button(props: Props) {
+export default function Button(props: Props): JSX.Element {
   const { label, loading, ...obj } = props;
   return (
     <button

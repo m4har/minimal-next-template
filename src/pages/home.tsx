@@ -3,7 +3,7 @@ import useAuth from "@stores/auth-persist";
 import Button from "@components/button";
 import Seo from "@components/seo";
 
-function Home() {
+function Home(): JSX.Element {
   const { onLogout } = useAuth((state) => state);
 
   return (

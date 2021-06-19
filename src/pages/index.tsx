@@ -6,7 +6,7 @@ import Seo from "@components/seo";
 import useAuth from "@stores/auth-persist";
 import protectHOC from "@hoc/proteced-route";
 
-function Login() {
+function Login(): JSX.Element {
   const { loading, onLogin } = useAuth((state) => state);
 
   const { register, handleSubmit } = useForm();

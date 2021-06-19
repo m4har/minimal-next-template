@@ -5,7 +5,7 @@ interface Props {
   desc?: string;
   icon?: string;
 }
-function Seo(props: Props) {
+function Seo(props: Props): JSX.Element {
   const { title, desc, icon } = props;
   return (
     <Head>

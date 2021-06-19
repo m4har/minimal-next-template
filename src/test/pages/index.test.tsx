@@ -15,7 +15,7 @@ describe("Login page", () => {
   it("login test", async () => {
     const promise = Promise.resolve();
 
-    const { getByTestId, getByText } = render(<Login />, { pathname: "/" });
+    const { getByTestId, getByText } = render(<Login />);
 
     const emailInput = "eve.holt@reqres.in";
     const passwordInput = "cityslicka";

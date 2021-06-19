@@ -1,47 +1,51 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, ComponentType } from "react";
 import useAuth from "@stores/auth-persist";
 import { useRouter } from "next/router";
 
-const protectHOC = (Component: any) => (props: any) => {
-  const { token } = useAuth((state) => state);
-  const router = useRouter();
+interface Props {}
 
-  const [state, setState] = useState({ loading: true, isAllow: false });
+const protectHOC =
+  <P extends Props>(Component: ComponentType<P>): ComponentType<P> =>
+  (props): JSX.Element => {
+    const { token } = useAuth((state) => state);
+    const router = useRouter();
 
-  const isAuthPage = useMemo(
-    () => ["/"].some((i) => i === router.pathname),
-    []
-  );
+    const [state, setState] = useState({ loading: true, isAllow: false });
 
-  useEffect(() => {
-    if (token === "") {
-      if (isAuthPage) {
-        setState({ loading: false, isAllow: true });
-      } else {
-        setState({ loading: false, isAllow: false });
-        setTimeout(() => {
-          router.replace("/");
-        }, 3000);
-      }
-    } else {
-      if (isAuthPage) {
-        router.replace("/home");
-      } else {
-        setState({ loading: false, isAllow: true });
-      }
-    }
-  }, [token]);
-
-  if (state.loading) return <div />;
-
-  if (!state.isAllow)
-    return (
-      <div className="h-screen flex items-center justify-center flex-col">
-        <p>Kamu harus login untuk mengakses halaman ini.</p>
-        <p>Mengalihkan dalam beberapa detik...</p>
-      </div>
+    const isAuthPage = useMemo(
+      () => ["/"].some((i) => i === router.pathname),
+      []
     );
 
-  return <Component {...props} />;
-};
+    useEffect(() => {
+      if (token === "") {
+        if (isAuthPage) {
+          setState({ loading: false, isAllow: true });
+        } else {
+          setState({ loading: false, isAllow: false });
+          setTimeout(() => {
+            router.replace("/");
+          }, 3000);
+        }
+      } else {
+        if (isAuthPage) {
+          router.replace("/home");
+        } else {
+          setState({ loading: false, isAllow: true });
+        }
+      }
+    }, [token]);
+
+    if (state.loading) return <div />;
+
+    if (!state.isAllow)
+      return (
+        <div className="h-screen flex items-center justify-center flex-col">
+          <p>Kamu harus login untuk mengakses halaman ini.</p>
+          <p>Mengalihkan dalam beberapa detik...</p>
+        </div>
+      );
+
+    return <Component {...props} />;
+  };
 export default protectHOC;
