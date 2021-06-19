@@ -16,19 +16,14 @@
     "lint": "eslint . --ext ts --ext tsx --ext js",
     "test": "jest",
     "cov": "jest --coverage --runInBand --coverageReporters='text-summary'",
-    "test-all": "npm run lint && npm run type-check && npm run cov"
+    "test-all": "npm run lint && npm run type-check && npm run cov",
+    "prepare": "husky install"
   },
   "lint-staged": {
     "*.@(ts|tsx)": [
-      "yarn lint",
-      "yarn format"
+      "npm run lint",
+      "npm run format"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint",
-      "pre-push": "npm run test-all"
-    }
   },
   "dependencies": {
     "axios": "^0.21.1",
