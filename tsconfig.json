@@ -9,7 +9,8 @@
       "@stores/*": ["stores/*"],
       "@styles/*": ["styles/*"],
       "@utils/*": ["utils/*"],
-      "@hoc/*": ["hoc/*"]
+      "@hoc/*": ["hoc/*"],
+      "@test/*": ["test/*"]
     },
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,

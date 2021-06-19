@@ -10,19 +10,46 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "type-check": "tsc --pretty --noEmit",
+    "format": "prettier --write .",
+    "lint": "eslint . --ext ts --ext tsx --ext js",
+    "test": "jest",
+    "test-all": "npm run lint && npm run type-check && npm run test"
+  },
+  "lint-staged": {
+    "*.@(ts|tsx)": [
+      "yarn lint",
+      "yarn format"
+    ]
   },
   "dependencies": {
     "axios": "^0.21.1",
     "next": "11.0.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-hook-form": "^7.8.8",
     "zustand": "^3.5.2"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^13.1.9",
+    "@types/jest": "^26.0.23",
     "@types/react": "17.0.11",
+    "@typescript-eslint/eslint-plugin": "^4.27.0",
+    "@typescript-eslint/parser": "^4.27.0",
     "autoprefixer": "^10.2.6",
+    "babel-jest": "^27.0.2",
+    "eslint": "^7.28.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-react": "^7.24.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.0.4",
+    "jest-watch-typeahead": "^0.6.4",
+    "lint-staged": "^11.0.0",
     "postcss": "^8.3.5",
+    "prettier": "^2.3.1",
     "tailwindcss": "^2.0.4",
     "typescript": "4.3.3"
   }
