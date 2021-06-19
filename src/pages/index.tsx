@@ -1,4 +1,5 @@
 import { useCallback } from "react";
+import { useForm } from "react-hook-form";
 import Button from "@components/button";
 import Input from "@components/input";
 import Seo from "@components/seo";
@@ -8,27 +9,28 @@ import protectHOC from "@hoc/proteced-route";
 function Login() {
   const { loading, onLogin } = useAuth((state) => state);
 
+  const { register, handleSubmit } = useForm();
+
   const onSubmit = useCallback((e) => {
-    e.preventDefault();
-
-    const email = e.target[0].value;
-    const password = e.target[1].value;
-
-    onLogin({ email, password });
+    onLogin(e);
   }, []);
 
   return (
     <div className="bg-gray-50 h-screen flex items-center justify-center">
       <Seo title="Login" desc="halaman login" />
       <main className="bg-gray-100 px-20 py-4 rounded border-2">
-        <form onSubmit={onSubmit}>
+        <form onSubmit={handleSubmit(onSubmit)}>
           <Input
+            {...register("email")}
+            data-testid="email"
             defaultValue="eve.holt@reqres.in"
             label="Email"
             placeholder="Input your email..."
             required
           />
           <Input
+            {...register("password")}
+            data-testid="password"
             defaultValue="cityslicka"
             label="Password"
             placeholder="Input your password..."
