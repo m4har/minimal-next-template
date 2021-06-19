@@ -1,4 +1,5 @@
-[![Coverage Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/m4har/e05a478a5ecbdcc4d2c422d60136cb6f/raw/coverage)]
+![banner](https://media-exp3.licdn.com/dms/image/C5616AQHYiib7xYuOUQ/profile-displaybackgroundimage-shrink_350_1400/0/1616494697310?e=1629331200&v=beta&t=aL3L4pfC1XjTfQzvln4MyJIfdeFzZX0ES_bNALe8hhU)
+![Coverage Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/m4har/e05a478a5ecbdcc4d2c422d60136cb6f/raw/coverage)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
