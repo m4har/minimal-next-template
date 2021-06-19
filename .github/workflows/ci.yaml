@@ -68,7 +68,7 @@ jobs:
         with:
           auth: ${{ secrets.GIST_SECRET }}
           gistID: e05a478a5ecbdcc4d2c422d60136cb6f
-          filename: minimal-next-template__${{ env.BRANCH }}.json
+          filename: coverage
           label: Test Coverage
           message: ${{ env.COVERAGE }}
           color: green
