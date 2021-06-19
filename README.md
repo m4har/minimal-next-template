@@ -1,4 +1,4 @@
-[![Coverage Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/m4har/e05a478a5ecbdcc4d2c422d60136cb6f/raw/minimal-next-template__heads_main.json)]
+[![Coverage Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/m4har/e05a478a5ecbdcc4d2c422d60136cb6f/raw/coverage)]
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
