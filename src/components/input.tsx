@@ -1,4 +1,4 @@
-import { InputHTMLAttributes, memo, forwardRef, LegacyRef } from "react";
+import { InputHTMLAttributes, memo, forwardRef } from "react";
 
 interface Props extends InputHTMLAttributes<HTMLInputElement> {
   label?: string;

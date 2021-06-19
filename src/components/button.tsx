@@ -6,12 +6,11 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export default function Button(props: Props) {
-  const { onClick, label, loading, ...obj } = props;
+  const { label, loading, ...obj } = props;
   return (
     <button
       {...obj}
       className="bg-primary text-white px-4 py-2 rounded-md inline-flex"
-      onClick={onClick}
     >
       {loading && (
         <svg
@@ -42,7 +41,6 @@ export default function Button(props: Props) {
 
 Button.defaultProps = {
   label: "Submit",
-  onClick: () => {},
   loading: false,
   type: "submit",
 };
