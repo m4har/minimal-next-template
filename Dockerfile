@@ -6,7 +6,7 @@ WORKDIR /app
 
 COPY . /app
 
-EXPOSE 8080
+EXPOSE 3000
 
 # install package from package-lock
 RUN npm ci
