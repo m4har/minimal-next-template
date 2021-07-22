@@ -1,4 +1,4 @@
-import { render, fireEvent, act } from "@test/testUtils";
+import { render, fireEvent, act } from "@test/utils";
 import Login from "@pages/index";
 
 jest.mock("next/router", () => {

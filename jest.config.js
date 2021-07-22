@@ -2,6 +2,7 @@ module.exports = {
   roots: ["<rootDir>"],
   testEnvironment: "jsdom",
   moduleFileExtensions: ["ts", "tsx", "js", "json", "jsx"],
+  setupFiles: ["<rootDir>/src/test/__mocks__/setup.ts"],
   testPathIgnorePatterns: ["<rootDir>[/\\\\](node_modules|.next)[/\\\\]"],
   transformIgnorePatterns: ["[/\\\\]node_modules[/\\\\].+\\.(ts|tsx)$"],
   transform: {
@@ -13,7 +14,7 @@ module.exports = {
   ],
   moduleNameMapper: {
     "\\.(css|less|sass|scss)$": "identity-obj-proxy",
-    "\\.(gif|ttf|eot|svg|png)$": "<rootDir>/src/test/__mocks__/fileMock.js",
+    "\\.(gif|ttf|eot|svg|png)$": "<rootDir>/src/test/__mocks__/setup.ts",
     "^@components/(.*)$": "<rootDir>/src/components/$1",
     "^@pages/(.*)$": "<rootDir>/src/pages/$1",
     "^@helpers/(.*)$": "<rootDir>/src/helpers/$1",

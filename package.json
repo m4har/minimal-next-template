@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": false,
   "author": {
-    "name": "m4har",
+    "name": "Mahardicka Nurachman",
     "email": "mahardicka404@gmail.com",
-    "url": "https://m4har.github.io"
+    "url": "https://m4har.vercel.app"
   },
   "scripts": {
     "dev": "next dev",
@@ -14,8 +14,8 @@
     "type-check": "tsc --pretty --noEmit",
     "format": "prettier --write .",
     "lint": "eslint . --ext ts --ext tsx --ext js",
-    "test": "jest",
-    "cov": "jest --coverage --runInBand --coverageReporters='text-summary'",
+    "test": "jest --coverage --coverageReporters='text-summary'",
+    "cov": "jest --coverage --runInBand",
     "test-all": "npm run lint && npm run type-check && npm run cov",
     "prepare": "husky install"
   },
@@ -41,7 +41,7 @@
     "@types/react": "17.0.11",
     "@typescript-eslint/eslint-plugin": "^4.27.0",
     "@typescript-eslint/parser": "^4.27.0",
-    "autoprefixer": "^10.2.6",
+    "autoprefixer": "^10.3.1",
     "babel-jest": "^27.0.2",
     "eslint": "^7.28.0",
     "eslint-config-next": "^11.0.0",
@@ -52,9 +52,9 @@
     "jest": "^27.0.4",
     "jest-watch-typeahead": "^0.6.4",
     "lint-staged": "^11.0.0",
-    "postcss": "^8.3.5",
+    "postcss": "^8.3.6",
     "prettier": "^2.3.1",
-    "tailwindcss": "^2.0.4",
+    "tailwindcss": "^2.2.6",
     "typescript": "4.3.3"
   }
 }
